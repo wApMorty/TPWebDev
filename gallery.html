@@ -36,6 +36,8 @@
     <!-- Magnific Popup core CSS file -->
     <link rel="stylesheet" href="css/magnific-popup.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <script src="js/modernizr-2.8.3.min.js"></script>
     <!-- Modernizr /-->
     <!--[if IE 9]>
@@ -75,36 +77,106 @@
         </div>
     </nav>
 
-
-    <div class=container>
-        <div class="row" style="margin:20px; padding:15px">
-            <div class="col-sm-4" style="background:#afafaf">
-                <ul>
-                    <li>Rémi BORDET</li>
-                    <li>Antoine CALDEIRA</li>
-                    <li>Antoine FOREST</li>
-                    <li>Matthieu GOULEAU</li>
-                    <li>Alexandre GRANDIN</li>
-                    <li>Paul JANSEN</li>
-                    <li>Florent LE CHANU</li>
-                    <li>Cecile LEROUGE</li>
-                    <li>Pauline LOUAPRE</li>
-                    <li>Thomas MENARD</li>
-                    <li>Thibault NGUYEN</li>
-                    <li>Lily ROUSSEL</li>
-                    <li>Julien VANHOUTTE</li>
-                    <li>Eden BRIEND</li>
-                    <li>Maxime CHAIGNEAU</li>
-                    <li>Clément CHAPLAIN</li>
-                    <li>Léa CONAN</li>
-                    <li>Raissa KASOKI</li>
-                    <li>Pauline RUBIN</li>
-                </ul>
-            </div>
+    <div class="row" style="margin:20px; padding:15px">
+        <div class="col-sm-4" style="background:#afafaf">
+            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    <tr><td><a onclick="showprofile(1)">Rémi BORDET</a></td></tr>
+                    <tr><td><a onclick="showprofile(2)">Antoine CALDEIRA</a></td></tr>
+                    <tr><td><a onclick="showprofile(3)">Antoine FOREST</a></td></tr>
+                    <tr><td><a onclick="showprofile(4)">Mathieu GOULEAU</a></td></tr>
+                    <tr><td><a onclick="showprofile(5)">Alexandre GRANDIN</a></td></tr>
+                    <tr><td><a onclick="showprofile(6)">Paul JANSEN</a></td></tr>
+                    <tr><td><a onclick="showprofile(7)">Florent LE CHANU</a></td></tr>
+                    <tr><td><a onclick="showprofile(8)">Cecile LEROUGE</a></td></tr>
+                    <tr><td><a onclick="showprofile(9)">Pautdne LOUAPRE</a></td></tr>
+                    <tr><td><a onclick="showprofile(10)">Thomas MENARD</a></td></tr>
+                    <tr><td><a onclick="showprofile(11)">Thibault NGUYEN</a></td></tr>
+                    <tr><td><a onclick="showprofile(12)">Lily ROUSSEL</a></td></tr>
+                    <tr><td><a onclick="showprofile(13)">Jutden VANHOUTTE</a></td></tr>
+                    <tr><td><a onclick="showprofile(14)">Eden BRIEND</a></td></tr>
+                    <tr><td><a onclick="showprofile(15)">Maxime CHAIGNEAU</a></td></tr>
+                    <tr><td><a onclick="showprofile(16)">Clément CHAPLAIN</a></td></tr>
+                    <tr><td><a onclick="showprofile(17)">Léa CONAN</a></td></tr>
+                    <tr><td><a onclick="showprofile(18)">Raissa KASOKI</a></td></tr>
+                    <tr><td><a onclick="showprofile(19)">Pauline RUBIN</a></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4" style="background: #616060;">
+            <img id="profilepic" width="100%">
         </div>
     </div>
 
 
+    <script>
+        function showprofile(a){
+            switch(a){
+                case 1:
+                    pic = "img/trombi/image001.jpg";
+                    break;
+                case 2:
+                    pic = "img/trombi/image002.jpg";
+                    break;
+                case 3:
+                    pic = "img/trombi/image003.jpg";
+                    break;
+                case 4:
+                    pic = "img/trombi/image004.jpg";
+                    break;
+                case 5:
+                    pic = "img/trombi/image005.jpg";
+                    break;
+                case 6:
+                    pic = "img/trombi/image006.jpg";
+                    break;
+                case 7:
+                    pic = "img/trombi/image007.jpg";
+                    break;
+                case 8:
+                    pic = "img/trombi/image008.jpg";
+                    break;
+                case 9:
+                    pic = "img/trombi/image009.jpg";
+                    break;
+                case 10:
+                    pic = "img/trombi/image010.jpg";
+                    break;
+                case 11:
+                    pic = "img/trombi/image011.jpg";
+                    break;
+                case 12:
+                    pic = "img/trombi/image013.jpg";
+                    break;
+                case 13:
+                    pic = "img/trombi/image014.jpg";
+                    break;
+                case 14:
+                    pic = "img/trombi/image015.jpg";
+                    break;
+                case 15:
+                    pic = "img/trombi/image016.jpg";
+                    break;
+                case 16:
+                    pic = "img/trombi/image017.jpg";
+                    break;
+                case 17:
+                    pic = "img/trombi/image018.jpg";
+                    break;
+                case 18:
+                    pic = "img/trombi/image019.jpg";
+                    break;
+                case 19:
+                    pic = "img/trombi/image020.jpg";
+                    break;
+                default:
+                    pic = "img/trombi/image001.jpg";
+                    break;
+            }
+            document.getElementById("profilepic").src=pic;
+        }
+    </script>
 
     <!-- JavaScript -->
     <script src="js/jquery-1.10.2.js"></script>
