@@ -4,15 +4,23 @@
     <meta charset='utf-8'>
     <meta lang="fr">
     <title>ISS Tracker</title>
-
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/ISS_position.js"></script>
+    <script src="js/ISS.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7e99wsXeaEulKkMOuF9_atHJV7WfD-gQ&callback=position">
+            </script>
 </head>
 
 <body>
     <p>
         <h1>Position de l'ISS</h1>
-        <button type="button" onclick="Position()">Actualise</button>
+        <button type="button" onclick="position()">Actualise</button>
         <h2>latitude :</h2>
         <div id="ISS_latitude">
             ...
@@ -24,12 +32,29 @@
         </div>
 
         <h1>Occupants de l'ISS</h1>
-        <button type="button" onclick="People()">Actualise</button>
         <div id="ISS_people">
            
             ...
         </div>
+        <!-- <div>
+            Il y a :
+            <div id="people_0"></div>
+            <div id="people_1"></div>
+            <div id="people_2"></div>
+            <div id="people_3"></div>
+            <div id="people_4"></div>
+            <div id="people_5"></div>
+        </div> -->
+    </p>
+    <p>
+        <div id="map"></div>
         
+
+
+
+
+
+
     </p>
 </body>
 </html>
