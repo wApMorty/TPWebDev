@@ -14,14 +14,14 @@ var positioncallBackGetSuccess = function(data) {
 
   var pos = { lat: lat, lng: lng };
 
-  var map = new google.maps.Map(document.getElementById("map"), {
+  var map1 = new google.maps.Map(document.getElementById("map"), {
     zoom: 4,
     center: pos
   });
 
   var marker = new google.maps.Marker({
     position: pos,
-    map: map,
+    map: map1,
     animation: google.maps.Animation.DROP
   });
 };
@@ -32,10 +32,10 @@ var peoplecallBackGetSuccess = function(data) {
   var nb = data.number;
   element.innerHTML = nb + " personnes dans l'ISS";
 
-  for (var i = 0; i < nb ; i++) {
-  var element = document.getElementById("people_" + i);
-  element.innerHTML = data.people[i].name;
-  
+  for (var i = 0; i < nb; i++) {
+    var element = document.getElementById("people_" + i);
+    element.innerHTML = data.people[i].name;
+  }
 };
 
 function position() {
