@@ -1,0 +1,207 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Flatfy Free Flat and Responsive HTML5 Template ">
+    <meta name="author" content="">
+
+    <title>Flatfy – Free Flat and Responsive HTML5 Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Google Web Font -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS-->
+    <link href="css/general.css" rel="stylesheet">
+
+    <!-- Owl-Carousel -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="js/modernizr-2.8.3.min.js"></script>
+    <!-- Modernizr /-->
+    <!--[if IE 9]>
+		<script src="js/PIE_IE9.js"></script>
+	<![endif]-->
+    <!--[if lt IE 9]>
+		<script src="js/PIE_IE678.js"></script>
+	<![endif]-->
+
+    <!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->
+
+</head>
+
+<body id="gallery">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+
+    <nav class="navbar navbar-inverse fixed-top">
+        <a class="navbar-brand" href="index.html"><img src="img/icon/home.png" alt=""></a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse" style="padding:15px">
+            <ul class="navbar-nav">
+                <li class="nav-item" style="margin:10px">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active" style="margin:10px">
+                    <a class="nav-link" href="gallery.html">Galerie</a>
+                </li>
+                <li class="nav-item" style="margin:10px">
+                    <a class="nav-link disabled" href="iss.html">ISS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row" style="margin:20px; padding:15px">
+        <div class="col-sm-4" style="background:#afafaf">
+            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+            <table class="table table-bordered table-striped">
+                <tbody>
+                    <tr><td><a onclick="showprofile(1)">Rémi BORDET</a></td></tr>
+                    <tr><td><a onclick="showprofile(2)">Antoine CALDEIRA</a></td></tr>
+                    <tr><td><a onclick="showprofile(3)">Antoine FOREST</a></td></tr>
+                    <tr><td><a onclick="showprofile(4)">Mathieu GOULEAU</a></td></tr>
+                    <tr><td><a onclick="showprofile(5)">Alexandre GRANDIN</a></td></tr>
+                    <tr><td><a onclick="showprofile(6)">Paul JANSEN</a></td></tr>
+                    <tr><td><a onclick="showprofile(7)">Florent LE CHANU</a></td></tr>
+                    <tr><td><a onclick="showprofile(8)">Cecile LEROUGE</a></td></tr>
+                    <tr><td><a onclick="showprofile(9)">Pautdne LOUAPRE</a></td></tr>
+                    <tr><td><a onclick="showprofile(10)">Thomas MENARD</a></td></tr>
+                    <tr><td><a onclick="showprofile(11)">Thibault NGUYEN</a></td></tr>
+                    <tr><td><a onclick="showprofile(12)">Lily ROUSSEL</a></td></tr>
+                    <tr><td><a onclick="showprofile(13)">Jutden VANHOUTTE</a></td></tr>
+                    <tr><td><a onclick="showprofile(14)">Eden BRIEND</a></td></tr>
+                    <tr><td><a onclick="showprofile(15)">Maxime CHAIGNEAU</a></td></tr>
+                    <tr><td><a onclick="showprofile(16)">Clément CHAPLAIN</a></td></tr>
+                    <tr><td><a onclick="showprofile(17)">Léa CONAN</a></td></tr>
+                    <tr><td><a onclick="showprofile(18)">Raissa KASOKI</a></td></tr>
+                    <tr><td><a onclick="showprofile(19)">Pauline RUBIN</a></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4" style="background: #616060;">
+            <img id="profilepic" width="100%">
+        </div>
+    </div>
+
+
+    <script>
+        function showprofile(a){
+            switch(a){
+                case 1:
+                    pic = "img/trombi/image001.jpg";
+                    break;
+                case 2:
+                    pic = "img/trombi/image002.jpg";
+                    break;
+                case 3:
+                    pic = "img/trombi/image003.jpg";
+                    break;
+                case 4:
+                    pic = "img/trombi/image004.jpg";
+                    break;
+                case 5:
+                    pic = "img/trombi/image005.jpg";
+                    break;
+                case 6:
+                    pic = "img/trombi/image006.jpg";
+                    break;
+                case 7:
+                    pic = "img/trombi/image007.jpg";
+                    break;
+                case 8:
+                    pic = "img/trombi/image008.jpg";
+                    break;
+                case 9:
+                    pic = "img/trombi/image009.jpg";
+                    break;
+                case 10:
+                    pic = "img/trombi/image010.jpg";
+                    break;
+                case 11:
+                    pic = "img/trombi/image011.jpg";
+                    break;
+                case 12:
+                    pic = "img/trombi/image013.jpg";
+                    break;
+                case 13:
+                    pic = "img/trombi/image014.jpg";
+                    break;
+                case 14:
+                    pic = "img/trombi/image015.jpg";
+                    break;
+                case 15:
+                    pic = "img/trombi/image016.jpg";
+                    break;
+                case 16:
+                    pic = "img/trombi/image017.jpg";
+                    break;
+                case 17:
+                    pic = "img/trombi/image018.jpg";
+                    break;
+                case 18:
+                    pic = "img/trombi/image019.jpg";
+                    break;
+                case 19:
+                    pic = "img/trombi/image020.jpg";
+                    break;
+                default:
+                    pic = "img/trombi/image001.jpg";
+                    break;
+            }
+            document.getElementById("profilepic").src=pic;
+        }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/script.js"></script>
+    <!-- StikyMenu -->
+    <script src="js/stickUp.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function($) {
+            $(document).ready(function() {
+                $('.navbar-default').stickUp();
+
+            });
+        });
+    </script>
+    <!-- Smoothscroll -->
+    <script type="text/javascript" src="js/jquery.corner.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="js/classie.js"></script>
+    <script src="js/uiMorphingButton_inflow.js"></script>
+    <!-- Magnific Popup core JS file -->
+    <script src="js/jquery.magnific-popup.js"></script>
+
+</body>
