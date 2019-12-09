@@ -77,8 +77,9 @@
         </div>
     </nav>
 
+    <!--Liste + filtre pour sélection du profil-->
     <div class="row" style="margin:20px; padding:15px">
-        <div class="col-sm-4" style="background:#afafaf">
+        <div class="col-sm-4">
             <input class="form-control" id="myInput" type="text" placeholder="Search..">
             <table class="table table-bordered table-striped">
                 <tbody>
@@ -90,11 +91,11 @@
                     <tr><td><a onclick="showprofile(6)">Paul JANSEN</a></td></tr>
                     <tr><td><a onclick="showprofile(7)">Florent LE CHANU</a></td></tr>
                     <tr><td><a onclick="showprofile(8)">Cecile LEROUGE</a></td></tr>
-                    <tr><td><a onclick="showprofile(9)">Pautdne LOUAPRE</a></td></tr>
+                    <tr><td><a onclick="showprofile(9)">Pauline LOUAPRE</a></td></tr>
                     <tr><td><a onclick="showprofile(10)">Thomas MENARD</a></td></tr>
                     <tr><td><a onclick="showprofile(11)">Thibault NGUYEN</a></td></tr>
                     <tr><td><a onclick="showprofile(12)">Lily ROUSSEL</a></td></tr>
-                    <tr><td><a onclick="showprofile(13)">Jutden VANHOUTTE</a></td></tr>
+                    <tr><td><a onclick="showprofile(13)">Julien VANHOUTTE</a></td></tr>
                     <tr><td><a onclick="showprofile(14)">Eden BRIEND</a></td></tr>
                     <tr><td><a onclick="showprofile(15)">Maxime CHAIGNEAU</a></td></tr>
                     <tr><td><a onclick="showprofile(16)">Clément CHAPLAIN</a></td></tr>
@@ -104,9 +105,13 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-sm-4" style="background: #616060;">
+
+        <!--Partie affichage de l'image-->
+        <div class="col-sm-4">
             <img id="profilepic" width="100%">
         </div>
+
+        <div class="col-sm-4" id="infos"></div>
     </div>
 
 
@@ -115,66 +120,145 @@
             switch(a){
                 case 1:
                     pic = "img/trombi/image001.jpg";
+                    name = "Rémi BORDET";
+                    spe = "Etudiant ECAM5 IOC";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 2:
                     pic = "img/trombi/image002.jpg";
+                    name = "Antoine CALDEIRA";
+                    spe = "Etudiant ECAM5 IOC";
+                    more = "Artiste incompris<br>Beaucoup trop de cheveux";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 3:
                     pic = "img/trombi/image003.jpg";
+                    name = "Antoine FOREST";
+                    spe = "Etudiant ECAM5 IOC";
+                    more = "\"Assurément quelqu'un sur qui on peut compter\"<br>- Winston Churchill";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 4:
                     pic = "img/trombi/image004.jpg";
+                    name = "Mathieu GOULEAU";
+                    spe = "Etudiant ECAM5 IOC";
+                    more = "Rugbyman le jour, business man la nuit";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 5:
                     pic = "img/trombi/image005.jpg";
+                    name = "Alexandre GRANDIN";
+                    spe = "Etudiant ECAM5 IOC";
+                    more = "";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 6:
                     pic = "img/trombi/image006.jpg";
+                    name = "Paul JANSEN";
+                    spe = "Etudiant ECAM5 IOC";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 7:
                     pic = "img/trombi/image007.jpg";
+                    name = "Florent LE CHANU";
+                    spe = "Etudiant ECAM5 IOC";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 8:
                     pic = "img/trombi/image008.jpg";
+                    name = "Cecile LEROUGE";
+                    spe = "Etudiant ECAM5 IOC";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 9:
                     pic = "img/trombi/image009.jpg";
+                    name = "Pauline LOUAPRE";
+                    spe = "Etudiant ECAM5 IOC";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 10:
                     pic = "img/trombi/image010.jpg";
+                    name = "Thomas MENARD";
+                    spe = "Etudiant ECAM5 IOC";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 11:
                     pic = "img/trombi/image011.jpg";
+                    name = "Thibault NGUYEN";
+                    spe = "Etudiant ECAM5 IOC";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 12:
                     pic = "img/trombi/image013.jpg";
+                    name = "Lily ROUSSEL";
+                    spe = "Etudiant ECAM5 IOC";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 13:
                     pic = "img/trombi/image014.jpg";
+                    name = "Julien VANHOUTTE";
+                    spe = "Etudiant ECAM5 IOC";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 14:
                     pic = "img/trombi/image015.jpg";
+                    name = "Eden BRIEND";
+                    spe = "Bi-diplôme ECAM/IGR";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 15:
                     pic = "img/trombi/image016.jpg";
+                    name = "Maxime CHAIGNEAU";
+                    spe = "Bi-diplôme ECAM/IGR";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 16:
                     pic = "img/trombi/image017.jpg";
+                    name = "Clément CHAPLAIN";
+                    spe = "Bi-diplôme ECAM/IGR";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 17:
                     pic = "img/trombi/image018.jpg";
+                    name = "Léa CONAN";
+                    spe = "Bi-diplôme ECAM/IGR";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 18:
                     pic = "img/trombi/image019.jpg";
+                    name = "Raissa KASOKI";
+                    spe = "Bi-diplôme ECAM/IGR";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 case 19:
                     pic = "img/trombi/image020.jpg";
+                    name = "Pauline RUBIN";
+                    spe = "Bi-diplôme ECAM/IGR";
+                    more = "Champion de judo et de programmation<br>A participé à la nuit de l'Info 2019";
+                    contact = "remi.bordet@ecam-rennes.com"
                     break;
                 default:
-                    pic = "img/trombi/image001.jpg";
                     break;
             }
             document.getElementById("profilepic").src=pic;
+            document.getElementById("infos").innerHTML = "<h1>" + name + "</h1>" +
+                                                         "<h3>" + spe + "</h3>"+
+                                                         "<h4>" + more + "</h4>"+
+                                                         "<p>" + contact + "</p>";
         }
     </script>
 
