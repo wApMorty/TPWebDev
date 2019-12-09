@@ -1869,7 +1869,7 @@ fieldset[disabled] .input-group-btn .btn-default.active {
 }
 .navbar {
   font-size: 16px;
-  min-height: 53px;
+  min-height: 80px;
   border: none;
   border-radius: 6px;
 }
@@ -2408,7 +2408,6 @@ select[multiple].navbar-form .btn {
 }
 .navbar-inverse .navbar-collapse {
   border-color: #2f4154;
-  border-width: 2px;
 }
 .navbar-inverse .navbar-nav > li > a {
   color: #ffffff;
@@ -2458,7 +2457,6 @@ select[multiple].navbar-form .btn {
 }
 .navbar-inverse .navbar-nav > .open > .dropdown-menu {
   background-color: #34495e;
-  padding: 3px 4px;
 }
 .navbar-inverse .navbar-nav > .open > .dropdown-menu > li > a {
   color: #e1e4e7;
