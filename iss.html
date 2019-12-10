@@ -12,6 +12,11 @@
             height: 300px;
             width: 100%;
         }
+
+        #map_proche {
+            height: 400px;
+            width: 100%;
+        }
     </style>
 
     <!-- Bootstrap core CSS -->
@@ -71,7 +76,7 @@
         </div>
     </nav>
 
-    <div class="row" style="margin:20px; padding:15px">
+    <div class="row" style="margin-left:20px; margin-right:20px; padding:15px">
         <div class="container .text-center" style="margin-bottom:10px">
             <h2>International Space Station</h2>
         </div>
@@ -156,54 +161,58 @@
             </table>
 
             <button type="button" class="btn btn-success" onclick="position()">Actualiser</button>
-            <button type="button" class="btn paris" onclick="position()">Simuler Paris</button>
         </div>
 
 
         <div class="col-sm-8">
-            <div id="map"></div>
-            <table class="table table-bordered table-striped ">
-                <tbody>
-                    <tr>
-                        <td>Informations du pays survolé:</td>
-                        <td>
-                            <div id="Pays_detection">pas d'information pertinantes</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Région:</td>
-                        <td>
-                            <div id="ISS_info">pas d'information pertinantes</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Pays :</td>
-                        <td>
-                            <div id="Pays_nom">pas d'information pertinantes</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Capitale:</td>
-                        <td>
-                            <div id="Pays_capitale">pas d'information pertinantes</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Population:</td>
-                        <td>
-                            <div id="ISS_info">pas d'information pertinantes</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Monnaie:</td>
-                        <td>
-                            <div id="ISS_info">pas d'information pertinantes</div>
-                        </td>
-                    </tr>
+            <div id="map" style="margin-bottom:10px"></div>
+            <div class="col-sm-4">
+                <table class="table table-bordered table-striped ">
+                    <tbody>
+                        <tr>
+                            <td>Informations du pays survolé:</td>
+                        </tr>
+                        <tr>
+                            <td>Région :</td>
+                            <td>
+                                <div id="Pays_region">pas d'information pertinantes</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pays :</td>
+                            <td>
+                                <div id="Pays_nom">pas d'information pertinantes</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Capitale :</td>
+                            <td>
+                                <div id="Pays_capitale">pas d'information pertinantes</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Population :</td>
+                            <td>
+                                <div id="Pays_nb">pas d'information pertinantes</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Monnaie :</td>
+                            <td>
+                                <div id="Pays_monnaie">pas d'information pertinantes</div>
+                            </td>
+                        </tr>
 
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+                <button type="button" class="btn paris" onclick="position_Paris()">Simuler ISS au dessus de la
+                    France</button>
+
+            </div>
+            <div class="col-sm-8">
+                <div id="map_proche"></div>
+            </div>
 
         </div>
     </div>
