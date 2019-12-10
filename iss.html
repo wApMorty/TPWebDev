@@ -3,8 +3,7 @@
 
 <head>
     <meta charset='utf-8'>
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <meta lang="fr">
     <title>ISS Tracker</title>
     <style>
@@ -19,9 +18,7 @@
 
     <!-- Custom Google Web Font -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link
-        href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
-        rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom CSS-->
@@ -41,13 +38,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script src="js/ISS.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7e99wsXeaEulKkMOuF9_atHJV7WfD-gQ&callback=position">
-        </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7e99wsXeaEulKkMOuF9_atHJV7WfD-gQ&callback=position">
+    </script>
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
 
+    <!-- Navbar -->
 
     <nav class="navbar navbar-inverse fixed-top">
         <a class="navbar-brand" href="index.html"><img src="img/icon/home.png" alt=""></a>
@@ -94,37 +95,43 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>#1</a></td>
+                        <td>#1</a>
+                        </td>
                         <td>
                             <div id="people_0"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td>#2</a></td>
+                        <td>#2</a>
+                        </td>
                         <td>
                             <div id="people_1"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td>#3</a></td>
+                        <td>#3</a>
+                        </td>
                         <td>
                             <div id="people_2"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td>#4</a></td>
+                        <td>#4</a>
+                        </td>
                         <td>
                             <div id="people_3"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td>#5</a></td>
+                        <td>#5</a>
+                        </td>
                         <td>
                             <div id="people_4"></div>
                         </td>
                     </tr>
                     <tr>
-                        <td>#6</a></td>
+                        <td>#6</a>
+                        </td>
                         <td>
                             <div id="people_5"></div>
                         </td>
@@ -152,7 +159,31 @@
         </div>
     </div>
 
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/script.js"></script>
+    <!-- StikyMenu -->
+    <script src="js/stickUp.min.js"></script>
+    <script type="text/javascript">
+        jQuery(function($) {
+            $(document).ready(function() {
+                $('.navbar-default').stickUp();
 
+            });
+        });
+    </script>
+    <!-- Smoothscroll -->
+    <script type="text/javascript" src="js/jquery.corner.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="js/classie.js"></script>
+    <script src="js/uiMorphingButton_inflow.js"></script>
+    <!-- Magnific Popup core JS file -->
+    <script src="js/jquery.magnific-popup.js"></script>
 </body>
 
 </html>

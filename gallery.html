@@ -13,7 +13,7 @@
     <meta name="description" content="Flatfy Free Flat and Responsive HTML5 Template ">
     <meta name="author" content="">
 
-    <title>Flatfy – Free Flat and Responsive HTML5 Template</title>
+    <title>Annuaire ECAM5 IOC</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -83,25 +83,63 @@
             <input class="form-control" id="input" type="text" placeholder="Search.." onkeydown="filterTable()">
             <table class="table table-bordered table-striped" id="table">
                 <tbody>
-                    <tr><td><a onclick="showprofile(1)">Rémi BORDET</a></td></tr>
-                    <tr><td><a onclick="showprofile(2)">Antoine CALDEIRA</a></td></tr>
-                    <tr><td><a onclick="showprofile(3)">Antoine FOREST</a></td></tr>
-                    <tr><td><a onclick="showprofile(4)">Mathieu GOULEAU</a></td></tr>
-                    <tr><td><a onclick="showprofile(5)">Alexandre GRANDIN</a></td></tr>
-                    <tr><td><a onclick="showprofile(6)">Paul JANSEN</a></td></tr>
-                    <tr><td><a onclick="showprofile(7)">Florent LE CHANU</a></td></tr>
-                    <tr><td><a onclick="showprofile(8)">Cecile LEROUGE</a></td></tr>
-                    <tr><td><a onclick="showprofile(9)">Pauline LOUAPRE</a></td></tr>
-                    <tr><td><a onclick="showprofile(10)">Thomas MENARD</a></td></tr>
-                    <tr><td><a onclick="showprofile(11)">Thibault NGUYEN</a></td></tr>
-                    <tr><td><a onclick="showprofile(12)">Lily ROUSSEL</a></td></tr>
-                    <tr><td><a onclick="showprofile(13)">Julien VANHOUTTE</a></td></tr>
-                    <tr><td><a onclick="showprofile(14)">Eden BRIEND</a></td></tr>
-                    <tr><td><a onclick="showprofile(15)">Maxime CHAIGNEAU</a></td></tr>
-                    <tr><td><a onclick="showprofile(16)">Clément CHAPLAIN</a></td></tr>
-                    <tr><td><a onclick="showprofile(17)">Léa CONAN</a></td></tr>
-                    <tr><td><a onclick="showprofile(18)">Raissa KASOKI</a></td></tr>
-                    <tr><td><a onclick="showprofile(19)">Pauline RUBIN</a></td></tr>
+                    <tr>
+                        <td><a onclick="showprofile(1)">Rémi BORDET</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(2)">Antoine CALDEIRA</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(3)">Antoine FOREST</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(4)">Mathieu GOULEAU</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(5)">Alexandre GRANDIN</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(6)">Paul JANSEN</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(7)">Florent LE CHANU</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(8)">Cecile LEROUGE</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(9)">Pauline LOUAPRE</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(10)">Thomas MENARD</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(11)">Thibault NGUYEN</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(12)">Lily ROUSSEL</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(13)">Julien VANHOUTTE</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(14)">Eden BRIEND</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(15)">Maxime CHAIGNEAU</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(16)">Clément CHAPLAIN</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(17)">Léa CONAN</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(18)">Raissa KASOKI</a></td>
+                    </tr>
+                    <tr>
+                        <td><a onclick="showprofile(19)">Pauline RUBIN</a></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
@@ -111,13 +149,14 @@
             <img id="profilepic" width="100%" class="animated slideInUp">
         </div>
 
+        <!--Affichage des infos contact-->
         <div class="col-sm-4" id="infos"></div>
     </div>
 
 
     <script>
-        function showprofile(a){
-            switch(a){
+        function showprofile(a) {
+            switch (a) {
                 case 1:
                     pic = "img/trombi/image001.jpg";
                     name = "Rémi BORDET";
@@ -213,52 +252,57 @@
                     pic = "img/trombi/image015.jpg";
                     name = "Eden BRIEND";
                     spe = "Bi-diplôme ECAM/IGR";
-                    more = "\"On aime pas trop les IGR dans le coin ...\"<br>- Etudiant Info après quelques verres de trop";
+                    more = "\"On n'aime pas trop les IGR dans le coin ...\"<br>- Etudiant Info après quelques verres de trop";
                     contact = "eden.briend@ecam-rennes.com"
                     break;
                 case 15:
                     pic = "img/trombi/image016.jpg";
                     name = "Maxime CHAIGNEAU";
                     spe = "Bi-diplôme ECAM/IGR";
-                    more = "\"On aime pas trop les IGR dans le coin ...\"<br>- Etudiant Info après quelques verres de trop<br>A participé à la nuit de l'Info 2019";
+                    more = "\"On n'aime pas trop les IGR dans le coin ...\"<br>- Etudiant Info après quelques verres de trop<br>A participé à la nuit de l'Info 2019";
                     contact = "maxime.chaigneau@ecam-rennes.com"
                     break;
                 case 16:
                     pic = "img/trombi/image017.jpg";
                     name = "Clément CHAPLAIN";
                     spe = "Bi-diplôme ECAM/IGR";
-                    more = "\"On aime pas trop les IGR dans le coin ...\"<br>- Etudiant Info après quelques verres de trop<br>A participé à la nuit de l'Info 2019";
+                    more = "\"On n'aime pas trop les IGR dans le coin ...\"<br>- Etudiant Info après quelques verres de trop<br>A participé à la nuit de l'Info 2019";
                     contact = "clement.chaplain@ecam-rennes.com"
                     break;
                 case 17:
                     pic = "img/trombi/image018.jpg";
                     name = "Léa CONAN";
                     spe = "Bi-diplôme ECAM/IGR";
-                    more = "\"On aime pas trop les IGR dans le coin ...\"<br>- Etudiant Info après quelques verres de trop<br>A participé à la nuit de l'Info 2019";
+                    more = "\"On n'aime pas trop les IGR dans le coin ...\"<br>- Etudiant Info après quelques verres de trop<br>A participé à la nuit de l'Info 2019";
                     contact = "lea.conan@ecam-rennes.com"
                     break;
                 case 18:
                     pic = "img/trombi/image019.jpg";
                     name = "Raissa KASOKI";
                     spe = "Bi-diplôme ECAM/IGR";
-                    more = "\"On aime pas trop les IGR dans le coin ...\"<br>- Etudiant Info après quelques verres de trop";
+                    more = "\"On n'aime pas trop les IGR dans le coin ...\"<br>- Etudiant Info après quelques verres de trop";
                     contact = "reine-raissa.kasoki-talyamwanya@ecam-rennes.com"
                     break;
                 case 19:
                     pic = "img/trombi/image020.jpg";
                     name = "Pauline RUBIN";
                     spe = "Bi-diplôme ECAM/IGR";
-                    more = "\"On aime pas trop les IGR dans le coin ...\"<br>- Etudiant Info après quelques verres de trop<br>A participé à la nuit de l'Info 2019";
+                    more = "\"On n'aime pas trop les IGR dans le coin ...\"<br>- Etudiant Info après quelques verres de trop<br>A participé à la nuit de l'Info 2019";
                     contact = "pauline.rubin@ecam-rennes.com"
                     break;
                 default:
                     break;
             }
-            document.getElementById("profilepic").src=pic;
+            document.getElementById("profilepic").src = pic;
+            animerImage();
             document.getElementById("infos").innerHTML = "<h1>" + name + "</h1>" +
-                                                         "<h3>" + spe + "</h3>"+
-                                                         "<h4>" + more + "</h4>"+
-                                                         "<p>" + contact + "</p>";
+                "<h3>" + spe + "</h3>" +
+                "<h4>" + more + "</h4>" +
+                "<p>" + contact + "</p>";
+        }
+
+        function animerImage() {
+
         }
     </script>
 
