@@ -11,7 +11,6 @@ Doit contenir une présentation de votre groupe :
 -	Pour chaque étudiant, sur une action utilisateur, présenter la carte détaillée dans une zone attenante au tableau. => DONE
 
 **TO DO :**
-+ Faire fonctionner le filtre
 + Ajouter des animations
 
 # __ISS__
