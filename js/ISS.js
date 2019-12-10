@@ -1,13 +1,17 @@
-var positioncallBackGetSuccess = function(data) {
+var positioncallBackGetSuccess = function (data) {
   console.log(data);
   var element1 = document.getElementById("ISS_latitude");
   var element2 = document.getElementById("ISS_longitude");
+  var element3 = document.getElementById("ISS_altitude");
+  var element4 = document.getElementById("ISS_vitesse");
 
-  element1.innerHTML = data.iss_position.latitude + "°";
-  element2.innerHTML = data.iss_position.longitude + "°";
+  element1.innerHTML = Math.round(data.latitude * 100) / 100 + "\ °";
+  element2.innerHTML = Math.round(data.longitude * 100) / 100 + "\ °";
+  element3.innerHTML = Math.round(data.altitude * 10) / 10 + "\ km";
+  element4.innerHTML = Math.round(data.velocity * 10) / 10 + "\ km/h";
 
-  var lat = parseFloat(data.iss_position.latitude);
-  var lng = parseFloat(data.iss_position.longitude);
+  var lat = parseFloat(data.latitude);
+  var lng = parseFloat(data.longitude);
 
   console.log(lat);
   console.log(lng);
@@ -25,20 +29,20 @@ var positioncallBackGetSuccess = function(data) {
     animation: google.maps.Animation.DROP
   });
 
-  var url3 ="https://api.wheretheiss.at/v1/coordinates/"+lat+","+lng;
-  $.get(url3, infocallBackGetSuccess).done(function() {});
+  var url3 = "https://api.wheretheiss.at/v1/coordinates/" + lat + "," + lng;
+  $.get(url3, infocallBackGetSuccess).done(function () { });
 
 };
 
-var infocallBackGetSuccess = function(data){
+var infocallBackGetSuccess = function (data) {
   console.log(data);
 }
 
-var peoplecallBackGetSuccess = function(data) {
+var peoplecallBackGetSuccess = function (data) {
   console.log(data);
   var element = document.getElementById("ISS_people");
   var nb = data.number;
-  element.innerHTML = nb + " personnes dans l'ISS";
+  element.innerHTML = nb + "\ personnes dans l'ISS";
 
   for (var i = 0; i < nb; i++) {
     var element = document.getElementById("people_" + i);
@@ -47,8 +51,8 @@ var peoplecallBackGetSuccess = function(data) {
 };
 
 function position() {
-  var url = "http://api.open-notify.org/iss-now.json";
-  $.get(url, positioncallBackGetSuccess).done(function() {});
+  var url = "https://api.wheretheiss.at/v1/satellites/25544";
+  $.get(url, positioncallBackGetSuccess).done(function () { });
   var url2 = "http://api.open-notify.org/astros.json";
-  $.get(url2, peoplecallBackGetSuccess).done(function() {});
+  $.get(url2, peoplecallBackGetSuccess).done(function () { });
 }
