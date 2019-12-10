@@ -145,8 +145,8 @@
         </div>
 
         <!--Partie affichage de l'image-->
-        <div class="col-sm-4">
-            <img id="profilepic" width="100%" class="animated slideInUp">
+        <div id="imageContainer" class="col-sm-4" style="background: #b13030;">
+            <img id="profilepic" width="100%">
         </div>
 
         <!--Affichage des infos contact-->
@@ -302,7 +302,36 @@
         }
 
         function animerImage() {
+            let posTop = screen.height;
+            speed = 5;
 
+            function move() {
+                if (posTop > 800) {
+                    speed += 5;
+                    posTop -= speed;
+                    document.getElementById("imageContainer").style.top = posTop + "px";
+                    console.log(speed);
+                    requestAnimationFrame(move);
+                } else if (posTop > 400) {
+                    posTop -= speed;
+                    document.getElementById("imageContainer").style.top = posTop + "px";
+                    console.log(speed);
+                    requestAnimationFrame(move);
+                } else if (posTop > 20) {
+                    speed /= 1.001;
+                    posTop -= speed;
+                    document.getElementById("imageContainer").style.top = posTop + "px";
+                    console.log(speed);
+                    requestAnimationFrame(move);
+                } else if (posTop > 0) {
+                    speed = 1;
+                    posTop -= speed;
+                    document.getElementById("imageContainer").style.top = posTop + "px";
+                    console.log(speed);
+                    requestAnimationFrame(move);
+                }
+            }
+            requestAnimationFrame(move);
         }
     </script>
 
