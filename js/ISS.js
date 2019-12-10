@@ -24,7 +24,15 @@ var positioncallBackGetSuccess = function(data) {
     map: map1,
     animation: google.maps.Animation.DROP
   });
+
+  var url3 ="https://api.wheretheiss.at/v1/coordinates/"+lat+","+lng;
+  $.get(url3, infocallBackGetSuccess).done(function() {});
+
 };
+
+var infocallBackGetSuccess = function(data){
+  console.log(data);
+}
 
 var peoplecallBackGetSuccess = function(data) {
   console.log(data);
