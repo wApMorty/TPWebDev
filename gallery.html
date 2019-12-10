@@ -80,8 +80,8 @@
     <!--Liste + filtre pour sélection du profil-->
     <div class="row" style="margin:20px; padding:15px">
         <div class="col-sm-4">
-            <input class="form-control" id="myInput" type="text" placeholder="Search..">
-            <table class="table table-bordered table-striped">
+            <input class="form-control" id="input" type="text" placeholder="Search.." onkeydown="filterTable()">
+            <table class="table table-bordered table-striped" id="table">
                 <tbody>
                     <tr><td><a onclick="showprofile(1)">Rémi BORDET</a></td></tr>
                     <tr><td><a onclick="showprofile(2)">Antoine CALDEIRA</a></td></tr>
@@ -259,6 +259,30 @@
                                                          "<h3>" + spe + "</h3>"+
                                                          "<h4>" + more + "</h4>"+
                                                          "<p>" + contact + "</p>";
+        }
+    </script>
+
+    <script>
+        function filterTable() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("input");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("table");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
         }
     </script>
 
