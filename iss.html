@@ -3,7 +3,8 @@
 
 <head>
     <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <meta lang="fr">
     <title>ISS Tracker</title>
     <style>
@@ -18,7 +19,9 @@
 
     <!-- Custom Google Web Font -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link
+        href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic'
+        rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom CSS-->
@@ -38,8 +41,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script src="js/ISS.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7e99wsXeaEulKkMOuF9_atHJV7WfD-gQ&callback=position">
-    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7e99wsXeaEulKkMOuF9_atHJV7WfD-gQ&callback=position">
+        </script>
 </head>
 
 <body>
@@ -152,6 +156,7 @@
             </table>
 
             <button type="button" class="btn btn-success" onclick="position()">Actualiser</button>
+            <button type="button" class="btn paris" onclick="position()">Simuler Paris</button>
         </div>
 
 
@@ -162,9 +167,41 @@
                     <tr>
                         <td>Informations du pays survolé:</td>
                         <td>
+                            <div id="Pays_detection">pas d'information pertinantes</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Région:</td>
+                        <td>
                             <div id="ISS_info">pas d'information pertinantes</div>
                         </td>
                     </tr>
+                    <tr>
+                        <td>Pays :</td>
+                        <td>
+                            <div id="Pays_nom">pas d'information pertinantes</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Capitale:</td>
+                        <td>
+                            <div id="Pays_capitale">pas d'information pertinantes</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Population:</td>
+                        <td>
+                            <div id="ISS_info">pas d'information pertinantes</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Monnaie:</td>
+                        <td>
+                            <div id="ISS_info">pas d'information pertinantes</div>
+                        </td>
+                    </tr>
+
+
                 </tbody>
             </table>
 
@@ -179,8 +216,8 @@
     <!-- StikyMenu -->
     <script src="js/stickUp.min.js"></script>
     <script type="text/javascript">
-        jQuery(function($) {
-            $(document).ready(function() {
+        jQuery(function ($) {
+            $(document).ready(function () {
                 $('.navbar-default').stickUp();
 
             });

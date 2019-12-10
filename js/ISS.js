@@ -29,13 +29,27 @@ var positioncallBackGetSuccess = function (data) {
     animation: google.maps.Animation.DROP
   });
 
-  var url3 = "https://api.wheretheiss.at/v1/coordinates/" + lat + "," + lng;
+  // var url3 = "https://api.wheretheiss.at/v1/coordinates/" + lat + "," + lng;
+  var url3 = "https://api.wheretheiss.at/v1/coordinates/48.8,2.34";
   $.get(url3, infocallBackGetSuccess).done(function () { });
 
 };
 
 var infocallBackGetSuccess = function (data) {
   console.log(data);
+  var code = data.country_code;
+  var url4 = "https://restcountries.eu/rest/v2/alpha/"+code
+  $.get(url4, infoPayscallBackGetSuccess).done(function () { });
+}
+
+var infoPayscallBackGetSuccess =function(data) {
+  console.log(data);
+  var name = data.name;
+  var capital = data.capital;
+  var monnaie = data.currencies[0].name;
+  var monnaie_sym = data.currencies[0].symbol;
+  var population = data.population;
+  var region = data.region;
 }
 
 var peoplecallBackGetSuccess = function (data) {
