@@ -25,7 +25,7 @@ var positioncallBackGetSuccess = function(data) {
   });
 
   var map_proche = new google.maps.Map(document.getElementById("map_proche"), {
-    zoom: 13,
+    zoom: 11,
     center: pos,
     mapTypeId: "satellite",
     streetViewControl: false
