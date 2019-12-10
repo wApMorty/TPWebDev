@@ -13,7 +13,7 @@
     <meta name="description" content="Flatfy Free Flat and Responsive HTML5 Template ">
     <meta name="author" content="">
 
-    <title>Flatfy – Free Flat and Responsive HTML5 Template</title>
+    <title>Annuaire ECAM5 IOC</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -149,6 +149,7 @@
             <img id="profilepic" width="100%" class="animated slideInUp">
         </div>
 
+        <!--Affichage des infos contact-->
         <div class="col-sm-4" id="infos"></div>
     </div>
 
@@ -293,10 +294,15 @@
                     break;
             }
             document.getElementById("profilepic").src = pic;
+            animerImage();
             document.getElementById("infos").innerHTML = "<h1>" + name + "</h1>" +
                 "<h3>" + spe + "</h3>" +
                 "<h4>" + more + "</h4>" +
                 "<p>" + contact + "</p>";
+        }
+
+        function animerImage() {
+
         }
     </script>
 
