@@ -145,7 +145,7 @@
         </div>
 
         <!--Partie affichage de l'image-->
-        <div id="imageContainer" class="col-sm-4" style="background: #b13030;">
+        <div id="imageContainer" class="col-sm-4">
             <img id="profilepic" width="100%">
         </div>
 
@@ -299,35 +299,47 @@
                 "<h3>" + spe + "</h3>" +
                 "<h4>" + more + "</h4>" +
                 "<p>" + contact + "</p>";
+            animerTexte()
         }
 
         function animerImage() {
             let posTop = screen.height;
-            speed = 5;
+            topSpeed = 5;
 
             function move() {
-                if (posTop > 800) {
-                    speed += 5;
-                    posTop -= speed;
+                if (posTop > screen.height / 18) {
+                    topSpeed += 1.5;
+                    posTop -= topSpeed;
                     document.getElementById("imageContainer").style.top = posTop + "px";
-                    console.log(speed);
-                    requestAnimationFrame(move);
-                } else if (posTop > 400) {
-                    posTop -= speed;
-                    document.getElementById("imageContainer").style.top = posTop + "px";
-                    console.log(speed);
-                    requestAnimationFrame(move);
-                } else if (posTop > 20) {
-                    speed /= 1.001;
-                    posTop -= speed;
-                    document.getElementById("imageContainer").style.top = posTop + "px";
-                    console.log(speed);
+                    console.log(topSpeed);
                     requestAnimationFrame(move);
                 } else if (posTop > 0) {
-                    speed = 1;
-                    posTop -= speed;
+                    topSpeed = 2;
+                    posTop -= topSpeed;
                     document.getElementById("imageContainer").style.top = posTop + "px";
-                    console.log(speed);
+                    console.log(topSpeed);
+                    requestAnimationFrame(move);
+                }
+            }
+            requestAnimationFrame(move);
+        }
+
+        function animerTexte() {
+            let posLeft = screen.width / 3;
+            leftSpeed = 5;
+
+            function move() {
+                if (posLeft > screen.width / 35) {
+                    leftSpeed += 1.5;
+                    posLeft -= leftSpeed;
+                    document.getElementById("infos").style.left = posLeft + "px";
+                    console.log(leftSpeed);
+                    requestAnimationFrame(move);
+                } else if (posLeft > 0) {
+                    leftSpeed = 2;
+                    posLeft -= leftSpeed;
+                    document.getElementById("infos").style.left = posLeft + "px";
+                    console.log(leftSpeed);
                     requestAnimationFrame(move);
                 }
             }
