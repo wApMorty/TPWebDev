@@ -10,9 +10,6 @@ Doit contenir une présentation de votre groupe :
 -	Liste des étudiants dans un tableau avec un filtre intégré (Nom, prénom, photos) => DONE
 -	Pour chaque étudiant, sur une action utilisateur, présenter la carte détaillée dans une zone attenante au tableau. => DONE
 
-**TO DO :**
-+ Ajouter des animations
-
 # __ISS__
 Doit contenir :
 -	Position de ISS  => DONE
